@@ -1,0 +1,1613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <title>Jithesh Kumar | Tulunadu Cultural TV</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Tiro+Kannada:ital@0;1&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-pitch: #050507;
+      --bg-card: #0d0d12;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --red-accent: #ff0033;
+      --gold-accent: #f59e0b;
+    }
+
+    body {
+      background-color: var(--bg-pitch);
+      color: #f1f1f5;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    .font-kannada { font-family: 'Tiro Kannada', serif; }
+    .font-brand { font-family: 'Cinzel', serif; }
+
+    .hero-banner-tulunadu {
+      position: relative;
+      background-color: #050507;
+      overflow: hidden;
+    }
+
+    .hero-bg-collage {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      opacity: 0.22;
+      filter: saturate(1.2) contrast(1.15);
+      pointer-events: none;
+    }
+
+    .hero-bg-collage img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-vignette {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 40%, rgba(5,5,7,0.4) 0%, rgba(5,5,7,0.85) 60%, #050507 100%),
+                  linear-gradient(180deg, rgba(5,5,7,0.75) 0%, transparent 40%, rgba(5,5,7,0.95) 85%, #050507 100%);
+      pointer-events: none;
+    }
+
+    .subscribe-pulse {
+      box-shadow: 0 0 18px rgba(255, 0, 51, 0.5);
+      animation: pulse-glow 2.2s infinite;
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 14px rgba(255, 0, 51, 0.5); transform: scale(1); }
+      50% { box-shadow: 0 0 24px rgba(255, 0, 51, 0.9); transform: scale(1.02); }
+    }
+
+    .hide-scrollbar::-webkit-scrollbar { display: none; }
+    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="selection:bg-red-600 selection:text-white">
+
+  <!-- NAVIGATION BAR -->
+  <header class="sticky top-0 z-40 backdrop-blur-xl bg-[#050507]/90 border-b border-white/10 px-4 lg:px-12 py-3 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-3 group">
+      <div class="relative">
+        <div class="w-11 h-11 rounded-full p-[2px] bg-gradient-to-tr from-red-600 to-amber-500">
+          <div class="w-full h-full rounded-full bg-neutral-900 overflow-hidden flex items-center justify-center font-bold text-lg text-white">
+            JK
+          </div>
+        </div>
+        <span class="absolute -bottom-1 -right-1 w-4 h-4 bg-red-600 rounded-full border-2 border-black flex items-center justify-center text-[9px] font-bold">✓</span>
+      </div>
+      <div>
+        <h1 class="font-brand text-lg sm:text-xl font-bold tracking-wider text-white group-hover:text-red-500 transition">JITHESH KUMAR</h1>
+        <p class="text-[11px] text-neutral-400 tracking-wider uppercase font-semibold">Tulunadu Culture</p>
+      </div>
+    </a>
+
+    <!-- Category Nav Links -->
+    <nav class="hidden xl:flex items-center gap-5 text-xs uppercase tracking-wider text-neutral-300 font-semibold">
+      <a href="#shorts" class="hover:text-red-400 transition flex items-center gap-1"><i data-lucide="flame" class="w-3.5 h-3.5 text-red-500"></i>Shorts</a>
+      <a href="#bhoota-kola" class="hover:text-amber-400 transition">Bhoota Kola</a>
+      <a href="#kambala" class="hover:text-amber-400 transition">Kambala</a>
+      <a href="#pili-vesha" class="hover:text-amber-400 transition">Pili Vesha</a>
+      <a href="#ganeshotsava" class="hover:text-amber-400 transition">Ganeshotsava</a>
+      <a href="#festivals" class="hover:text-amber-400 transition">Festivals</a>
+      <a href="#vlog" class="hover:text-amber-400 transition">Vlog</a>
+      <a href="#songs" class="hover:text-amber-400 transition">Songs</a>
+      <a href="#yakshagana" class="hover:text-amber-400 transition">Yakshagana</a>
+      <a href="#contact" class="hover:text-amber-400 transition">Contact</a>
+    </nav>
+
+    <!-- Subscribe Action Button -->
+    <a href="https://www.youtube.com/@JitheshKumar?sub_confirmation=1" target="_blank" rel="noopener noreferrer"
+       class="subscribe-pulse inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white text-xs sm:text-sm font-bold uppercase tracking-wider px-4 sm:px-6 py-2.5 rounded-full transition transform active:scale-95">
+      <i data-lucide="youtube" class="w-4 h-4 sm:w-5 sm:h-5"></i>
+      <span>Subscribe</span>
+    </a>
+  </header>
+
+  <!-- HERO BANNER -->
+  <section class="hero-banner-tulunadu relative border-b border-white/10 py-24 sm:py-32 px-4 lg:px-8 text-center">
+    <div class="hero-bg-collage">
+      <img src="https://images.unsplash.com/photo-1545232979-8bf68ee9b1af?q=80&w=1200&auto=format&fit=crop" alt="Sacred Ritual Deepa" />
+      <img src="https://images.unsplash.com/photo-1609766418204-94aae0ecfddc?q=80&w=1200&auto=format&fit=crop" alt="Temple Chariot & Architecture" />
+      <img src="https://images.unsplash.com/photo-1514565131-fce0801e5785?q=80&w=1200&auto=format&fit=crop" alt="Festive Glow" />
+    </div>
+
+    <div class="hero-vignette"></div>
+
+    <div class="relative z-10 max-w-4xl mx-auto space-y-6">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-950/50 border border-red-500/30 text-red-400 text-xs font-semibold tracking-wide uppercase">
+        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Karavali Cultural Heritage
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight font-brand drop-shadow-2xl">
+        TULUNADU HERITAGE &amp; SACRED ROAR
+      </h1>
+
+      <p class="font-kannada text-neutral-200 text-base sm:text-xl leading-relaxed max-w-3xl mx-auto drop-shadow-md">
+        ಕರಾವಳಿಯ ಗಂಡುಕಲೆ, ದೈವಾರಾಧನೆ, ಕಂಬಳ, ಹುಲಿವೇಷ, ಭಕ್ತಿಗೀತೆಗಳು ಹಾಗೂ ಯಕ್ಷಗಾನದ ವಿಡಿಯೋ ಸಂಗ್ರಹ. ನಿಮ್ಮ ನೆಚ್ಚಿನ ವಿಡಿಯೋಗಳನ್ನು ಇಲ್ಲೇ ನೇರವಾಗಿ ಪ್ಲೇ ಮಾಡಿ ವೀಕ್ಷಿಸಿ.
+      </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
+        <a href="#bhoota-kola" class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold px-7 py-3.5 rounded-xl text-sm transition shadow-lg shadow-red-900/50">
+          <i data-lucide="play" class="w-4 h-4 fill-white"></i> Explore Archives
+        </a>
+        <a href="#about" class="inline-flex items-center gap-2 bg-neutral-900/80 hover:bg-neutral-800 text-neutral-200 border border-white/20 font-semibold px-7 py-3.5 rounded-xl text-sm transition backdrop-blur-sm">
+          About Jithesh Kumar
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LATEST 15 SHORTS SECTION (Horizontal Slide Bar + Show More Button) -->
+  <section id="shorts" class="py-12 border-b border-white/10 bg-[#07070a]">
+    <div class="max-w-7xl mx-auto px-4 lg:px-8">
+      <div class="flex items-center justify-between mb-6">
+        <div class="flex items-center gap-3">
+          <div class="p-2 bg-red-600/20 text-red-500 rounded-lg">
+            <i data-lucide="flame" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-white flex items-center gap-2">
+              Latest YouTube Shorts
+            </h2>
+            <p class="text-xs text-neutral-400">15 bite-sized sacred moments from @JitheshKumar &bull; Slide to explore</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <button onclick="scrollShorts('left')" class="p-2 rounded-lg bg-neutral-900 border border-white/10 hover:bg-neutral-800 text-neutral-300 transition" title="Previous">
+            <i data-lucide="chevron-left" class="w-5 h-5"></i>
+          </button>
+          <button onclick="scrollShorts('right')" class="p-2 rounded-lg bg-neutral-900 border border-white/10 hover:bg-neutral-800 text-neutral-300 transition" title="Next">
+            <i data-lucide="chevron-right" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Horizontal 1-Row Slide Bar -->
+      <div id="shorts-slider" class="flex gap-4 overflow-x-auto hide-scrollbar scroll-smooth pb-4 pt-1">
+
+        <!-- Short 1 -->
+        <div class="w-48 sm:w-56 shrink-0 bg-neutral-900/90 border border-white/10 rounded-2xl overflow-hidden group cursor-pointer transition hover:border-red-500/50"
+             onclick="playVideo('cLkEGMI5CtA', 'Panjurli Kola #daivaradhane #kantara')">
+          <div class="aspect-[9/16] relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/cLkEGMI5CtA/hqdefault.jpg" alt="Panjurli Kola" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/20"></div>
+            <div class="absolute top-2.5 right-2.5 bg-red-600/90 px-2 py-0.5 rounded text-[10px] font-mono text-white">#Shorts</div>
+            <div class="absolute bottom-3 left-3 right-3">
+              <span class="text-xs font-bold text-white line-clamp-2">Panjurli Kola #daivaradhane #kantara</span>
+              <p class="text-[11px] text-amber-400 font-semibold mt-1">Sacred Kola</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Short 2 -->
+        <div class="w-48 sm:w-56 shrink-0 bg-neutral-900/90 border border-white/10 rounded-2xl overflow-hidden group cursor-pointer transition hover:border-red-500/50"
+             onclick="playVideo('oHrBA0dyNo0', 'Panjurli #kola #daivaradhane @JitheshKumar')">
+          <div class="aspect-[9/16] relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/oHrBA0dyNo0/hqdefault.jpg" alt="Panjurli Short" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/20"></div>
+            <div class="absolute top-2.5 right-2.5 bg-red-600/90 px-2 py-0.5 rounded text-[10px] font-mono text-white">#Shorts</div>
+            <div class="absolute bottom-3 left-3 right-3">
+              <span class="text-xs font-bold text-white line-clamp-2">Panjurli #kola #daivaradhane</span>
+              <p class="text-[11px] text-amber-400 font-semibold mt-1">73K+ Views</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Short 3 -->
+        <div class="w-48 sm:w-56 shrink-0 bg-neutral-900/90 border border-white/10 rounded-2xl overflow-hidden group cursor-pointer transition hover:border-red-500/50"
+             onclick="playVideo('Up0vc2Hd_1A', 'Darshana Seve #daivaradhane @jitheshkumar')">
+          <div class="aspect-[9/16] relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/Up0vc2Hd_1A/hqdefault.jpg" alt="Darshana Seve" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/20"></div>
+            <div class="absolute top-2.5 right-2.5 bg-red-600/90 px-2 py-0.5 rounded text-[10px] font-mono text-white">#Shorts</div>
+            <div class="absolute bottom-3 left-3 right-3">
+              <span class="text-xs font-bold text-white line-clamp-2">Darshana Seve #daivaradhane</span>
+              <p class="text-[11px] text-amber-400 font-semibold mt-1">Holy Blessing</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Short 4 -->
+        <div class="w-48 sm:w-56 shrink-0 bg-neutral-900/90 border border-white/10 rounded-2xl overflow-hidden group cursor-pointer transition hover:border-red-500/50"
+             onclick="playVideo('Vz5uZ3mR5dc', 'Nitturu Panjurli #kola #daivaradhane')">
+          <div class="aspect-[9/16] relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/Vz5uZ3mR5dc/hqdefault.jpg" alt="Nitturu Panjurli" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/20"></div>
+            <div class="absolute top-2.5 right-2.5 bg-red-600/90 px-2 py-0.5 rounded text-[10px] font-mono text-white">#Shorts</div>
+            <div class="absolute bottom-3 left-3 right-3">
+              <span class="text-xs font-bold text-white line-clamp-2">Nitturu Panjurli #kola</span>
+              <p class="text-[11px] text-amber-400 font-semibold mt-1">3.8K Views</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Short 5 -->
+        <div class="w-48 sm:w-56 shrink-0 bg-neutral-900/90 border border-white/10 rounded-2xl overflow-hidden group cursor-pointer transition hover:border-red-500/50"
+             onclick="playVideo('TB78egHwLfI', 'Panjurli #kola #daivaradhane @JitheshKumar')">
+          <div class="aspect-[9/16] relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/TB78egHwLfI/hqdefault.jpg" alt="Panjurli Kola Nema" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/20"></div>
+            <div class="absolute top-2.5 right-2.5 bg-red-600/90 px-2 py-0.5 rounded text-[10px] font-mono text-white">#Shorts</div>
+            <div class="absolute bottom-3 left-3 right-3">
+              <span class="text-xs font-bold text-white line-clamp-2">Panjurli Sacred Nema</span>
+              <p class="text-[11px] text-amber-400 font-semibold mt-1">5.4K Views</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Short 6 -->
+        <div class="w-48 sm:w-56 shrink-0 bg-neutral-900/90 border border-white/10 rounded-2xl overflow-hidden group cursor-pointer transition hover:border-red-500/50"
+             onclick="playVideo('6ozIQkJyZWY', '#kalkuda #kola #shorts @JitheshKumar')">
+          <div class="aspect-[9/16] relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/6ozIQkJyZWY/hqdefault.jpg" alt="Kalkuda Kola" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/20"></div>
+            <div class="absolute top-2.5 right-2.5 bg-red-600/90 px-2 py-0.5 rounded text-[10px] font-mono text-white">#Shorts</div>
+            <div class="absolute bottom-3 left-3 right-3">
+              <span class="text-xs font-bold text-white line-clamp-2">ಕಲ್ಕುಡ ಕುದುರೆ ಏರಿ ಬರುವಾಗ... #kalkuda</span>
+              <p class="text-[11px] text-amber-400 font-semibold mt-1">Varte Kalkuda</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Short 7 -->
+        <div class="w-48 sm:w-56 shrink-0 bg-neutral-900/90 border border-white/10 rounded-2xl overflow-hidden group cursor-pointer transition hover:border-red-500/50"
+             onclick="playVideo('5aSBetJ66MU', 'Kattalsar #kola #daivaradhane #nema #shorts')">
+          <div class="aspect-[9/16] relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/5aSBetJ66MU/hqdefault.jpg" alt="Kattalsar Kola" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/20"></div>
+            <div class="absolute top-2.5 right-2.5 bg-red-600/90 px-2 py-0.5 rounded text-[10px] font-mono text-white">#Shorts</div>
+            <div class="absolute bottom-3 left-3 right-3">
+              <span class="text-xs font-bold text-white line-clamp-2">Kattalsar #kola #daivaradhane #nema</span>
+              <p class="text-[11px] text-amber-400 font-semibold mt-1">1.8K Views</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Short 8 -->
+        <div class="w-48 sm:w-56 shrink-0 bg-neutral-900/90 border border-white/10 rounded-2xl overflow-hidden group cursor-pointer transition hover:border-red-500/50"
+             onclick="playVideo('8lchun_gs_c', 'First Moto Vlog #vlog #motovlog #bikelife')">
+          <div class="aspect-[9/16] relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/8lchun_gs_c/hqdefault.jpg" alt="Moto Vlog Short" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/20"></div>
+            <div class="absolute top-2.5 right-2.5 bg-red-600/90 px-2 py-0.5 rounded text-[10px] font-mono text-white">#Shorts</div>
+            <div class="absolute bottom-3 left-3 right-3">
+              <span class="text-xs font-bold text-white line-clamp-2">ಕಟಪಾಡಿ to ಮಣಿಪಾಲ Moto Vlog</span>
+              <p class="text-[11px] text-amber-400 font-semibold mt-1">Chill Vibes</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Short 9 -->
+        <div class="w-48 sm:w-56 shrink-0 bg-neutral-900/90 border border-white/10 rounded-2xl overflow-hidden group cursor-pointer transition hover:border-red-500/50"
+             onclick="playVideo('qIZxaSbJYwg', 'Everything Is Temporary, So Live Fully ❤️')">
+          <div class="aspect-[9/16] relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/qIZxaSbJYwg/hqdefault.jpg" alt="Life Quotes" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/20"></div>
+            <div class="absolute top-2.5 right-2.5 bg-red-600/90 px-2 py-0.5 rounded text-[10px] font-mono text-white">#Shorts</div>
+            <div class="absolute bottom-3 left-3 right-3">
+              <span class="text-xs font-bold text-white line-clamp-2">Everything Is Temporary ❤️</span>
+              <p class="text-[11px] text-amber-400 font-semibold mt-1">Deep Thoughts</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Short 10 -->
+        <div class="w-48 sm:w-56 shrink-0 bg-neutral-900/90 border border-white/10 rounded-2xl overflow-hidden group cursor-pointer transition hover:border-red-500/50"
+             onclick="playVideo('f7h0BikaDnc', '#Ucchila #Dasara #shorts @JitheshKumar')">
+          <div class="aspect-[9/16] relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/f7h0BikaDnc/hqdefault.jpg" alt="Ucchila Dasara" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/20"></div>
+            <div class="absolute top-2.5 right-2.5 bg-red-600/90 px-2 py-0.5 rounded text-[10px] font-mono text-white">#Shorts</div>
+            <div class="absolute bottom-3 left-3 right-3">
+              <span class="text-xs font-bold text-white line-clamp-2">#Ucchila #Dasara Grand Celebration</span>
+              <p class="text-[11px] text-amber-400 font-semibold mt-1">Mahalakshmi Kshetra</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Short 11 -->
+        <div class="w-48 sm:w-56 shrink-0 bg-neutral-900/90 border border-white/10 rounded-2xl overflow-hidden group cursor-pointer transition hover:border-red-500/50"
+             onclick="playVideo('lj1-CqTU_44', 'Jhoot bole kawwa kaate #Shorts')">
+          <div class="aspect-[9/16] relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/lj1-CqTU_44/hqdefault.jpg" alt="Fun Shorts" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/20"></div>
+            <div class="absolute top-2.5 right-2.5 bg-red-600/90 px-2 py-0.5 rounded text-[10px] font-mono text-white">#Shorts</div>
+            <div class="absolute bottom-3 left-3 right-3">
+              <span class="text-xs font-bold text-white line-clamp-2">Fun Moments &bull; #Shorts</span>
+              <p class="text-[11px] text-amber-400 font-semibold mt-1">Quick Reel</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Short 12 -->
+        <div class="w-48 sm:w-56 shrink-0 bg-neutral-900/90 border border-white/10 rounded-2xl overflow-hidden group cursor-pointer transition hover:border-red-500/50"
+             onclick="playVideo('oHrBA0dyNo0', 'ದೈವದ ನರ್ತನ | Kola Trance #Shorts')">
+          <div class="aspect-[9/16] relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/oHrBA0dyNo0/hqdefault.jpg" alt="Daivaradhane Trance" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/20"></div>
+            <div class="absolute top-2.5 right-2.5 bg-red-600/90 px-2 py-0.5 rounded text-[10px] font-mono text-white">#Shorts</div>
+            <div class="absolute bottom-3 left-3 right-3">
+              <span class="text-xs font-bold text-white line-clamp-2">ದೈವದ ನರ್ತನ | Kola Trance</span>
+              <p class="text-[11px] text-amber-400 font-semibold mt-1">Spiritual Power</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Short 13 -->
+        <div class="w-48 sm:w-56 shrink-0 bg-neutral-900/90 border border-white/10 rounded-2xl overflow-hidden group cursor-pointer transition hover:border-red-500/50"
+             onclick="playVideo('Vz5uZ3mR5dc', 'ನಿಟ್ಟೂರು ಪಂಜುರ್ಲಿ ನೇಮ | Nittur Nema #Shorts')">
+          <div class="aspect-[9/16] relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/Vz5uZ3mR5dc/hqdefault.jpg" alt="Nittur Panjurli" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/20"></div>
+            <div class="absolute top-2.5 right-2.5 bg-red-600/90 px-2 py-0.5 rounded text-[10px] font-mono text-white">#Shorts</div>
+            <div class="absolute bottom-3 left-3 right-3">
+              <span class="text-xs font-bold text-white line-clamp-2">ನಿಟ್ಟೂರು ಪಂಜುರ್ಲಿ ನೇಮ #shorts</span>
+              <p class="text-[11px] text-amber-400 font-semibold mt-1">Udupi Kshetra</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Short 14 -->
+        <div class="w-48 sm:w-56 shrink-0 bg-neutral-900/90 border border-white/10 rounded-2xl overflow-hidden group cursor-pointer transition hover:border-red-500/50"
+             onclick="playVideo('TB78egHwLfI', 'ಪಂಜುರ್ಲಿ ದೈವಾರಾಧನೆ ಗಗ್ಗರ | Gaggara Ritual')">
+          <div class="aspect-[9/16] relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/TB78egHwLfI/hqdefault.jpg" alt="Gaggara Ritual" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/20"></div>
+            <div class="absolute top-2.5 right-2.5 bg-red-600/90 px-2 py-0.5 rounded text-[10px] font-mono text-white">#Shorts</div>
+            <div class="absolute bottom-3 left-3 right-3">
+              <span class="text-xs font-bold text-white line-clamp-2">ಪಂಜುರ್ಲಿ ದೈವಾರಾಧನೆ ಗಗ್ಗರ ಸೇವೆ</span>
+              <p class="text-[11px] text-amber-400 font-semibold mt-1">Holy Gaggara</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Short 15 -->
+        <div class="w-48 sm:w-56 shrink-0 bg-neutral-900/90 border border-white/10 rounded-2xl overflow-hidden group cursor-pointer transition hover:border-red-500/50"
+             onclick="playVideo('dF6ezwTapMA', 'Subscribe Now @jitheshkumar')">
+          <div class="aspect-[9/16] relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/dF6ezwTapMA/hqdefault.jpg" alt="Subscribe Channel Promo" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/20"></div>
+            <div class="absolute top-2.5 right-2.5 bg-red-600/90 px-2 py-0.5 rounded text-[10px] font-mono text-white">#Shorts</div>
+            <div class="absolute bottom-3 left-3 right-3">
+              <span class="text-xs font-bold text-white line-clamp-2">Subscribe Now @jitheshkumar</span>
+              <p class="text-[11px] text-amber-400 font-semibold mt-1">Official Promo</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- END OF 15 VIDEOS: SHOW MORE ON YOUTUBE BUTTON CARD -->
+        <a href="https://www.youtube.com/@JitheshKumar/shorts" target="_blank" rel="noopener noreferrer"
+           class="w-48 sm:w-56 shrink-0 bg-gradient-to-b from-[#181824] to-[#0d0d14] border-2 border-dashed border-red-500/40 hover:border-red-500 rounded-2xl flex flex-col items-center justify-center p-6 text-center group transition duration-300 hover:scale-[1.02]">
+          <div class="w-14 h-14 rounded-full bg-red-600/20 group-hover:bg-red-600 text-red-500 group-hover:text-white flex items-center justify-center transition mb-4 shadow-lg shadow-red-600/30">
+            <i data-lucide="youtube" class="w-7 h-7"></i>
+          </div>
+          <span class="text-sm font-bold text-white group-hover:text-red-400 transition">Show More on YouTube</span>
+          <p class="text-[11px] text-neutral-400 mt-2 leading-relaxed">Watch all Shorts directly on @JitheshKumar</p>
+          <div class="mt-4 inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-amber-400 group-hover:translate-x-1 transition">
+            <span>Explore All</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORY VIDEO ARCHIVES -->
+  <main class="max-w-7xl mx-auto px-4 lg:px-8 py-14 space-y-20">
+
+    <!-- 1. BHOOTA KOLA (6 Videos) -->
+    <section id="bhoota-kola" class="space-y-6">
+      <div class="border-b border-white/10 pb-4">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-wide font-brand">Bhoota Kola &bull; ಭೂತಕೋಲ ಮತ್ತು ದೈವಾರಾಧನೆ</h2>
+        <p class="text-xs sm:text-sm text-neutral-400 max-w-2xl mt-1">
+          Spiritual invocations, Nema, and Kola rituals filmed directly across Tulunadu.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('Kbug_8T-JtA', 'ಅಪ್ಪೆ ತನ್ನಿಮಾನಿಗ ಮಟ್ಟೆಲ್ ಪಾಡುನ ಪೊರ್ಲು | Tannimaniga Kola | Petebettu Katapadi')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/Kbug_8T-JtA/hqdefault.jpg" alt="Tannimaniga Kola" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">03:46</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಅಪ್ಪೆ ತನ್ನಿಮಾನಿಗ ಮಟ್ಟೆಲ್ ಪಾಡುನ ಪೊರ್ಲು | Tannimaniga Kola</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Sacred Mattel Paduna ritual at Petebettu Katapadi with massive devotion.</p>
+            </div>
+            <span class="text-xs text-amber-400 font-semibold mt-3 pt-2 border-t border-white/5">77K+ Views</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('Zh1dHGqolyQ', 'ಕಪ್ಪೆಟ್ಟು ವರ್ತೆ ಪಂಜುರ್ಲಿ ಕೋಲ | Varte Panjurli Kola | Kappettu Udupi')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/Zh1dHGqolyQ/hqdefault.jpg" alt="Varte Panjurli Kola" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">1:11:10</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಕಪ್ಪೆಟ್ಟು ವರ್ತೆ ಪಂಜುರ್ಲಿ ಕೋಲ | Varte Panjurli Kola</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Complete sacred Seva of Daiva Varte Panjurli held at Kappettu, Udupi.</p>
+            </div>
+            <span class="text-xs text-amber-400 font-semibold mt-3 pt-2 border-t border-white/5">8K+ Views</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('0KD9xaN10jA', 'ಮಲ್ಪೆ ಪಂಚಜುಮಾದಿ ಬಂಟ ಕೋಲ | Pancha Jumadi Kola | Malpe')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/0KD9xaN10jA/hqdefault.jpg" alt="Malpe Pancha Jumadi Kola" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">Malpe</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಮಲ್ಪೆ ಪಂಚಜುಮಾದಿ ಬಂಟ ಕೋಲ | Pancha Jumadi Kola</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Sacred invocation of Daiva Pancha Jumadi Banta at coastal Malpe.</p>
+            </div>
+            <span class="text-xs text-red-400 font-semibold mt-3 pt-2 border-t border-white/5">Malpe Kshetra</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('gvwgV_r3WkY', 'ಮೂಳೂರು ತನ್ನಿಮಾನಿಗ ಕೋಲ 2025 | Tannimaniga Kola | Moolur')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/gvwgV_r3WkY/hqdefault.jpg" alt="Moolur Tannimaniga Kola" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">Moolur</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಮೂಳೂರು ತನ್ನಿಮಾನಿಗ ಕೋಲ 2025 | Tannimaniga Kola</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Annual Kola festival of Mother Tannimaniga at Moolur.</p>
+            </div>
+            <span class="text-xs text-red-400 font-semibold mt-3 pt-2 border-t border-white/5">Moolur 2025</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('N-MFHJOzziQ', 'ಕೆಮ್ಮಣ್ಣು ಜುಮಾದಿ ಬಂಟ ಕೋಲ | Jumadi Banta Kola | Kemmannu')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/N-MFHJOzziQ/hqdefault.jpg" alt="Kemmannu Jumadi Banta Kola" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">Kemmannu</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಕೆಮ್ಮಣ್ಣು ಜುಮಾದಿ ಬಂಟ ಕೋಲ | Kemmannu Kola</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Traditional Nema invocation rituals performed at Kemmannu.</p>
+            </div>
+            <span class="text-xs text-red-400 font-semibold mt-3 pt-2 border-t border-white/5">Kemmannu Seva</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('Kbug_8T-JtA', 'ಕಟಪಾಡಿ ಪೇಟೆಬೆಟ್ಟು ತನ್ನಿಮಾನಿಗ ನೇಮೋತ್ಸವ | Tannimaniga Nema')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/Kbug_8T-JtA/hqdefault.jpg" alt="Petebettu Nemotsava" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">Katapadi</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಕಟಪಾಡಿ ಪೇಟೆಬೆಟ್ಟು ತನ್ನಿಮಾನಿಗ ನೇಮೋತ್ಸವ</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Sacred night darshana and Nema rituals celebrated at Petebettu Katapadi.</p>
+            </div>
+            <span class="text-xs text-amber-400 font-semibold mt-3 pt-2 border-t border-white/5">Divine Nema</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-center pt-4">
+        <a href="https://www.youtube.com/@JitheshKumar/search?query=kola" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 bg-neutral-900 hover:bg-red-600/20 text-neutral-300 hover:text-white border border-white/15 hover:border-red-500/50 px-6 py-3 rounded-xl text-xs sm:text-sm font-bold uppercase tracking-wider transition">
+          View More Bhoota Kola Videos on YouTube <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- 2. KAMBALA (6 Videos) -->
+    <section id="kambala" class="space-y-6">
+      <div class="border-b border-white/10 pb-4">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-wide font-brand">Kambala &bull; ಕರಾವಳಿಯ ಜಾನಪದ ಕ್ರೀಡೆ ಕಂಬಳ</h2>
+        <p class="text-xs sm:text-sm text-neutral-400 max-w-2xl mt-1">
+          Buffalo race action on mud tracks recorded across coastal Karnataka.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('ucAaCqF6rgM', 'ಇತಿಹಾಸ ಪ್ರಸಿದ್ಧ ತೋನ್ಸೆ ಪಡುಮನೆ ಕಂಬಳ | Tonse Padumane Kambala')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/ucAaCqF6rgM/hqdefault.jpg" alt="Tonse Padumane Kambala" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">Tonse</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಇತಿಹಾಸ ಪ್ರಸಿದ್ಧ ತೋನ್ಸೆ ಪಡುಮನೆ ಕಂಬಳ | Tonse Padumane</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Historic Tonse Padumane traditional rural Kambala races.</p>
+            </div>
+            <span class="text-xs text-amber-400 font-semibold mt-3 pt-2 border-t border-white/5">Tonse Padumane</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('Vftt7Gq46rE', 'ಮಹಿಷಮರ್ಧಿನಿ ಕಂಬಳ ಸಮಿತಿ ಹೊಕ್ಕಾಡಿಗೋಳಿ | ವೀರ ವಿಕ್ರಮ ಕಂಬಳ')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/Vftt7Gq46rE/hqdefault.jpg" alt="Hokkadigoli Kambala" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">Hokkadigoli</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಮಹಿಷಮರ್ಧಿನಿ ಹೊಕ್ಕಾಡಿಗೋಳಿ ಕಂಬಳ | Veera Vikrama</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Thrilling pairs dash at Hokkadigoli slush racetrack.</p>
+            </div>
+            <span class="text-xs text-red-400 font-semibold mt-3 pt-2 border-t border-white/5">Hokkadigoli</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('EELOlKJsY0k', 'ಕೆಸರ್ದ ಕಲ | ತುಳುನಾಡ ಕೆಸರಿನ ಆಟ | ಯುವವಾಹಿನಿ ಕಟಪಾಡಿ')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/EELOlKJsY0k/hqdefault.jpg" alt="Kesarda Kala Katapadi" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">Katapadi</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಕೆಸರ್ದ ಕಲ | ತುಳುನಾಡ ಕೆಸರಿನ ಆಟ | Katapadi</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Traditional rural slush field sports organized by Yuvavahini Katapadi.</p>
+            </div>
+            <span class="text-xs text-red-400 font-semibold mt-3 pt-2 border-t border-white/5">Slush Sports</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('ucAaCqF6rgM', 'ಜೋಡುಕೆರೆ ಕಂಬಳ ಕರಾವಳಿ ವೈಭವ | Jodukere Kambala')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/ucAaCqF6rgM/hqdefault.jpg" alt="Jodukere Race" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">Jodukere</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಜೋಡುಕೆರೆ ಕಂಬಳ ಕರಾವಳಿ ವೈಭವ | Jodukere</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Electrifying twin-track buffalo sprint racing in coastal Karnataka.</p>
+            </div>
+            <span class="text-xs text-amber-400 font-semibold mt-3 pt-2 border-t border-white/5">Jodukere Dash</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('Vftt7Gq46rE', 'ಕಂಬಳದ ಕೋಣಗಳ ಅದ್ದೂರಿ ಓಟ | Buffalo Sprint Action')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/Vftt7Gq46rE/hqdefault.jpg" alt="Buffalo Sprint" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">Kambala</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಕಂಬಳದ ಕೋಣಗಳ ಅದ್ದೂರಿ ಓಟ | High Speed Sprint</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Mud flying and fierce speed as pairs cross the Kane Halage mark.</p>
+            </div>
+            <span class="text-xs text-red-400 font-semibold mt-3 pt-2 border-t border-white/5">Mud Sprint</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('EELOlKJsY0k', 'ಕಟಪಾಡಿ ಕೆಸರುಗದ್ದೆ ಕ್ರೀಡಾಕೂಟ | Rural Mud Track Games')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/EELOlKJsY0k/hqdefault.jpg" alt="Mud Track Games" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">Mud Games</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಕಟಪಾಡಿ ಕೆಸರುಗದ್ದೆ ಕ್ರೀಡಾಕೂಟ | Rural Games</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Villagers and youth celebrating coastal farming traditions in the mud arena.</p>
+            </div>
+            <span class="text-xs text-amber-400 font-semibold mt-3 pt-2 border-t border-white/5">Village Heritage</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-center pt-4">
+        <a href="https://www.youtube.com/@JitheshKumar/search?query=kambala" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 bg-neutral-900 hover:bg-red-600/20 text-neutral-300 hover:text-white border border-white/15 hover:border-red-500/50 px-6 py-3 rounded-xl text-xs sm:text-sm font-bold uppercase tracking-wider transition">
+          View More Kambala Videos on YouTube <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- 3. PILI VESHA (6 Videos) -->
+    <section id="pili-vesha" class="space-y-6">
+      <div class="border-b border-white/10 pb-4">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-wide font-brand">Pili Vesha &bull; ಹುಲಿವೇಷ ಮತ್ತು ಜನಪದ ನೃತ್ಯ</h2>
+        <p class="text-xs sm:text-sm text-neutral-400 max-w-2xl mt-1">
+          Authentic tiger dance and tase drum performances documented on the channel.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('HBOfnJeHwz0', 'ಇದನ್ನು ನೋಡಿದ್ರೆ ನೀವೂ ಕುಣೀತೀರ | ಹುಲಿ ಕುಣಿತ | Durga Friends Alevooru')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/HBOfnJeHwz0/hqdefault.jpg" alt="Durga Friends Alevooru" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">Alevoor</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಇದನ್ನು ನೋಡಿದ್ರೆ ನೀವೂ ಕುಣೀತೀರ | Durga Friends Alevooru</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">High energy Pili Nalike by Durga Friends Alevooru.</p>
+            </div>
+            <span class="text-xs text-amber-400 font-semibold mt-3 pt-2 border-t border-white/5">Durga Friends</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('LtLpcn_QSbE', 'ಧರಣಿ ಮಂಡಲ ಮಧ್ಯದೊಳಗೆ.. ಹುಲಿ ವೇಷ ಕುಣಿತ | Durga Tigers Padu Alevoor')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/LtLpcn_QSbE/hqdefault.jpg" alt="Durga Tigers Padu Alevoor" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">Padu Alevoor</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಧರಣಿ ಮಂಡಲ ಮಧ್ಯದೊಳಗೆ.. ಹುಲಿ ವೇಷ | Durga Tigers</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Classic song rendition and fast-paced tiger dance steps.</p>
+            </div>
+            <span class="text-xs text-red-400 font-semibold mt-3 pt-2 border-t border-white/5">Padu Alevoor</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('zoXeh9QUTdw', 'ನೂರಾರು ಹೆಂಗಸರ ಹುಲಿ ಕುಣಿತ | Dandiya Night | Tiger Dance')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/zoXeh9QUTdw/hqdefault.jpg" alt="Women Tiger Dance Dandiya" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">Dandiya</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ನೂರಾರು ಹೆಂಗಸರ ಹುಲಿ ಕುಣಿತ | Dandiya Night</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Hundreds of women performing spirited tiger dance steps during festive Dandiya.</p>
+            </div>
+            <span class="text-xs text-red-400 font-semibold mt-3 pt-2 border-t border-white/5">Dandiya Night</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('c7m8lLph8MI', 'ಉಡುಪಿದ ಪಿಲಿಕುಲು ನಲ್ಪುನ ಪೊರ್ಲು ತೂಲೆಯೆ | Pili Nalike | Udupi Ashtami')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/c7m8lLph8MI/hqdefault.jpg" alt="Udupi Pili Nalike Ashtami" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">Ashtami</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಉಡುಪಿದ ಪಿಲಿಕುಲು ನಲ್ಪುನ ಪೊರ್ಲು | Pili Nalike</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Udupi Ashtami tiger dancers performing traditional steps with tase beats.</p>
+            </div>
+            <span class="text-xs text-red-400 font-semibold mt-3 pt-2 border-t border-white/5">Udupi Ashtami</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('I0txvJa9KlA', 'ಪಿಲಿ ನಲಿಕೆ | ಹುಲಿ ವೇಷ ಕುಣಿತ | Tiger Dance, Udupi 2018')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/I0txvJa9KlA/hqdefault.jpg" alt="Tiger Dance Udupi 2018" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">2018 Classic</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಪಿಲಿ ನಲಿಕೆ | ಹುಲಿ ವೇಷ ಕುಣಿತ | Udupi 2018</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Classic street acrobatic tiger dance recorded in Udupi.</p>
+            </div>
+            <span class="text-xs text-red-400 font-semibold mt-3 pt-2 border-t border-white/5">Classic Performance</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('HBOfnJeHwz0', 'ಅಲೆವೂರು ಹುಲಿ ಕುಣಿತ ಸಂಭ್ರಮ | Alevoor Pili Vesha Special')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/HBOfnJeHwz0/hqdefault.jpg" alt="Alevoor Pili Special" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">Pili Special</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಅಲೆವೂರು ಹುಲಿ ಕುಣಿತ ಸಂಭ್ರಮ | Pili Vesha Special</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Acrobatic backflips and fierce yellow painted tiger troupe dance in Udupi.</p>
+            </div>
+            <span class="text-xs text-amber-400 font-semibold mt-3 pt-2 border-t border-white/5">Fierce Troupe</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-center pt-4">
+        <a href="https://www.youtube.com/@JitheshKumar/search?query=pili" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 bg-neutral-900 hover:bg-red-600/20 text-neutral-300 hover:text-white border border-white/15 hover:border-red-500/50 px-6 py-3 rounded-xl text-xs sm:text-sm font-bold uppercase tracking-wider transition">
+          View More Pili Vesha Videos on YouTube <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- 4. GANESHOTSAVA (6 Videos) -->
+    <section id="ganeshotsava" class="space-y-6">
+      <div class="border-b border-white/10 pb-4">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-wide font-brand">Ganeshotsava &bull; ಸಾರ್ವಜನಿಕ ಶ್ರೀ ಗಣೇಶೋತ್ಸವ</h2>
+        <p class="text-xs sm:text-sm text-neutral-400 max-w-2xl mt-1">
+          Grand immersion processions and festival celebrations filmed by Jithesh Kumar.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('RrjClwVDjdQ', 'ಮಟ್ಟು ಕಟಪಾಡಿ ಗಣೇಶೋತ್ಸವ ಮೆರವಣಿಗೆ 2026 | Mattu Katapadi Procession')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/RrjClwVDjdQ/hqdefault.jpg" alt="Mattu Katapadi Ganeshotsava" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">11K Views</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಮಟ್ಟು ಕಟಪಾಡಿ ಗಣೇಶೋತ್ಸವ ಮೆರವಣಿಗೆ 2026</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Immersion procession of Mattu Katapadi Sarvajanika Ganeshotsava.</p>
+            </div>
+            <span class="text-xs text-amber-400 font-semibold mt-3 pt-2 border-t border-white/5">Mattu Katapadi</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('Y16cX_FdOhI', 'ಕಡಿಯಾಳಿ 60ನೇ ವರ್ಷದ ಗಣೇಶೋತ್ಸವ ಮೆರವಣಿಗೆ 2026 | Kadiyali 60th year Ganeshotsava Procession')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/Y16cX_FdOhI/hqdefault.jpg" alt="Kadiyali Ganeshotsava" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">60th Year</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಕಡಿಯಾಳಿ 60ನೇ ವರ್ಷದ ಗಣೇಶೋತ್ಸವ ಮೆರವಣಿಗೆ 2026</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Historic 60th Diamond Jubilee procession of Kadiyali Ganeshotsava in Udupi.</p>
+            </div>
+            <span class="text-xs text-amber-400 font-semibold mt-3 pt-2 border-t border-white/5">Kadiyali Diamond Jubilee</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('68yVFRNb6vU', 'ಕುರ್ಕಾಲು ಗಣೇಶೋತ್ಸವ ಮೆರವಣಿಗೆ 2026 | Kurkal Ganeshotsava Procession')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/68yVFRNb6vU/hqdefault.jpg" alt="Kurkal Ganeshotsava" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">Kurkal</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಕುರ್ಕಾಲು ಗಣೇಶೋತ್ಸವ ಮೆರವಣಿಗೆ 2026 | Kurkal Procession</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Kurkal Ganeshotsava immersion procession with youth celebrations.</p>
+            </div>
+            <span class="text-xs text-red-400 font-semibold mt-3 pt-2 border-t border-white/5">Kurkal</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('mfLQb7ITVto', 'ಮೂಡಬೆಟ್ಟು ಗಣೇಶೋತ್ಸವ ಮೆರವಣಿಗೆ 2026 | Moodabettu Ganeshotsava')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/mfLQb7ITVto/hqdefault.jpg" alt="Moodabettu Ganeshotsava" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">Moodabettu</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಮೂಡಬೆಟ್ಟು ಗಣೇಶೋತ್ಸವ ಮೆರವಣಿಗೆ 2026 | Moodabettu</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Moodabettu Katapadi Ganeshotsava immersion procession.</p>
+            </div>
+            <span class="text-xs text-red-400 font-semibold mt-3 pt-2 border-t border-white/5">Moodabettu</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('EIHRBdeSzHY', 'ಉದ್ಯಾವರ ಗಣೇಶೋತ್ಸವ ಮೆರವಣಿಗೆ 2026 | Ganeshotsava Procession Udyavara')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/EIHRBdeSzHY/hqdefault.jpg" alt="Udyavara Procession" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">Udyavara</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಉದ್ಯಾವರ ಗಣೇಶೋತ್ಸವ ಮೆರವಣಿಗೆ 2026 | Udyavara</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Sacred procession with cultural tableaux and fireworks in Udyavara.</p>
+            </div>
+            <span class="text-xs text-red-400 font-semibold mt-3 pt-2 border-t border-white/5">Udyavara</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('RrjClwVDjdQ', 'ಉಡುಪಿ ಪರಿಸರದ ಗಣೇಶ ವಿಸರ್ಜನೆ ಸಂಭ್ರಮ | Visarjana Procession')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/RrjClwVDjdQ/hqdefault.jpg" alt="Ganesh Visarjan" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">Visarjana</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಉಡುಪಿ ಪರಿಸರದ ಗಣೇಶ ವಿಸರ್ಜನೆ ಸಂಭ್ರಮ | Visarjana</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Devotional chants and musical celebration during Lord Ganesha's immersion.</p>
+            </div>
+            <span class="text-xs text-amber-400 font-semibold mt-3 pt-2 border-t border-white/5">Visarjana Utsava</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-center pt-4">
+        <a href="https://www.youtube.com/@JitheshKumar/search?query=ganeshotsava" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 bg-neutral-900 hover:bg-red-600/20 text-neutral-300 hover:text-white border border-white/15 hover:border-red-500/50 px-6 py-3 rounded-xl text-xs sm:text-sm font-bold uppercase tracking-wider transition">
+          View More Ganeshotsava Videos on YouTube <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- 5. FESTIVALS & TEMPLE HERITAGE (6 Videos) -->
+    <section id="festivals" class="space-y-6">
+      <div class="border-b border-white/10 pb-4">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-wide font-brand">Festivals &bull; ಜಾತ್ರೆ ಮತ್ತು ದೇವಸ್ಥಾನ ಮಹೋತ್ಸವ</h2>
+        <p class="text-xs sm:text-sm text-neutral-400 max-w-2xl mt-1">
+          Udupi Lakshadeepa, Vitlapindi, Kapu Mariamma Swarna Gadduge, and holy temple fair celebrations.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('8DbENTvdMWI', 'ಕಾಪು ಮಾರಿಯಮ್ಮನಿಗೆ ಸ್ವರ್ಣ ಗದ್ದುಗೆ ಮೆರವಣಿಗೆ | Kapu Mari Amma Temple')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/8DbENTvdMWI/hqdefault.jpg" alt="Kapu Mari Amma Swarna Gadduge" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">48K+ Views</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಕಾಪು ಮಾರಿಯಮ್ಮನಿಗೆ ಸ್ವರ್ಣ ಗದ್ದುಗೆ ಮೆರವಣಿಗೆ | Kapu Mari Amma</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Golden throne grand procession for Goddess Kapu Mariamma.</p>
+            </div>
+            <span class="text-xs text-amber-400 font-semibold mt-3 pt-2 border-t border-white/5">Kaup Mariamma</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('K_mtKYZPs10', 'ಶ್ರೀಕೃಷ್ಣಮಠದ ಲಕ್ಷದೀಪೋತ್ಸವ | Udupi Lakshadeepa | Udupi Krishna Mutt | Tulsi Pooja')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/K_mtKYZPs10/hqdefault.jpg" alt="Udupi Lakshadeepa" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">Lakshadeepa</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಶ್ರೀಕೃಷ್ಣಮಠದ ಲಕ್ಷದೀಪೋತ್ಸವ | Udupi Lakshadeepa</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Lakhs of lamps lit up during sacred Tulsi Pooja around Udupi Krishna Mutt Car Street.</p>
+            </div>
+            <span class="text-xs text-red-400 font-semibold mt-3 pt-2 border-t border-white/5">Krishna Mutt</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('iJJGFI2JHtQ', 'ಯಾರೂ ನೋಡಿರದ ರೀತಿಯಲ್ಲಿ ಉಡುಪಿ ವಿಟ್ಲ ಪಿಂಡಿ | Vitla Pindi Udupi')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/iJJGFI2JHtQ/hqdefault.jpg" alt="Vitla Pindi Udupi" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">Vitla Pindi</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಉಡುಪಿ ವಿಟ್ಲ ಪಿಂಡಿ | Vitla Pindi Utsava</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Sri Krishna Janmashtami Vitlapindi chariot festival celebration in Udupi.</p>
+            </div>
+            <span class="text-xs text-red-400 font-semibold mt-3 pt-2 border-t border-white/5">Udupi Car Street</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('irVnauH3tBY', 'ಉದ್ಯಾವರ ಮಹಾಕಾಳಿ ಕೋಲ | Mahakali Kola | Udyavara Shambukallu Temple')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/irVnauH3tBY/hqdefault.jpg" alt="Mahakali Kola Udyavara" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">Udyavara</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಉದ್ಯಾವರ ಮಹಾಕಾಳಿ ಕೋಲ | Shambukallu Temple</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Sacred Mahakali Kola rituals at historic Shambukallu Temple, Udyavara Kallada.</p>
+            </div>
+            <span class="text-xs text-red-400 font-semibold mt-3 pt-2 border-t border-white/5">Shambukallu</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('8DbENTvdMWI', 'ಕಾಪು ಹೊಸ ಮಾರಿಗುಡಿ ಮಹೋತ್ಸವ | Kapu Hosa Marigudi')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/8DbENTvdMWI/hqdefault.jpg" alt="Kapu Marigudi" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">Marigudi</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಕಾಪು ಹೊಸ ಮಾರಿಗುಡಿ ಮಹೋತ್ಸವ | Kapu Marigudi</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Thousands gathering for the divine presence at sacred Kapu Kshetra.</p>
+            </div>
+            <span class="text-xs text-amber-400 font-semibold mt-3 pt-2 border-t border-white/5">Hosa Marigudi</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('K_mtKYZPs10', 'ಉಡುಪಿ ರಥಬೀದಿ ದೀಪೋತ್ಸವ ವೈಭವ | Udupi Car Street Festivities')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/K_mtKYZPs10/hqdefault.jpg" alt="Udupi Car Street" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">Car Street</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಉಡುಪಿ ರಥಬೀದಿ ದೀಪೋತ್ಸವ ವೈಭವ | Deepotsava</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Golden night visual walk around Udupi's holy Madhwa Sarovara and Krishna Temple.</p>
+            </div>
+            <span class="text-xs text-amber-400 font-semibold mt-3 pt-2 border-t border-white/5">Sacred Walk</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-center pt-4">
+        <a href="https://www.youtube.com/@JitheshKumar/videos" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 bg-neutral-900 hover:bg-red-600/20 text-neutral-300 hover:text-white border border-white/15 hover:border-red-500/50 px-6 py-3 rounded-xl text-xs sm:text-sm font-bold uppercase tracking-wider transition">
+          View More Festival Videos on YouTube <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- 6. VLOG (6 Videos) -->
+    <section id="vlog" class="space-y-6">
+      <div class="border-b border-white/10 pb-4">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-wide font-brand">Vlog &bull; ತುಳುನಾಡು ವ್ಲಾಗ್ಸ್</h2>
+        <p class="text-xs sm:text-sm text-neutral-400 max-w-2xl mt-1">
+          First-person POV lifestyle stories, travel rides, and family moments created by Jithesh Kumar.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('VKOKct-jPUE', 'ಚೌತಿ ಪೂಜೆ Vlog with ತಮ್ಮನ ಮಗ | POV Shot B by Lenskart')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/VKOKct-jPUE/hqdefault.jpg" alt="Chavithi Puja POV" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">34:38</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಚೌತಿ ಪೂಜೆ Vlog with ತಮ್ಮನ ಮಗ | POV Shot</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">First-person festive family vlog covering home pooja preps and sweet village moments.</p>
+            </div>
+            <span class="text-xs text-amber-400 font-semibold mt-3 pt-2 border-t border-white/5">POV Vlog</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('mcQZOeu105c', 'Udupi to Ayodhya Vlog | ಶ್ರೀ ರಾಮನ ದರ್ಶನ | ಲೈಫ಼ಲ್ಲಿ ಒಮ್ಮೆ ನೋಡಲೇ ಬೇಕು')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/mcQZOeu105c/hqdefault.jpg" alt="Ayodhya Ram Mandir Vlog" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">Ayodhya</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">Udupi to Ayodhya Vlog | ಶ್ರೀ ರಾಮನ ದರ್ಶನ</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Sacred journey from Udupi to Ayodhya Ram Mandir with emotional Darshana.</p>
+            </div>
+            <span class="text-xs text-red-400 font-semibold mt-3 pt-2 border-t border-white/5">Ram Mandir</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('WAENz3cn8eU', 'ಕಾಶಿ ಯಾತ್ರೆ ಅಪ್ಪ ಅಮ್ಮನ ಜೊತೆ | Kashi Yatre Tulu Vlog')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/WAENz3cn8eU/hqdefault.jpg" alt="Kashi Yatre Vlog" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">Kashi</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಕಾಶಿ ಯಾತ್ರೆ ಅಪ್ಪ ಅಮ್ಮನ ಜೊತೆ | Kashi Yatre</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Spiritual pilgrimage journey to Varanasi/Kashi with parents narrated in Tulu.</p>
+            </div>
+            <span class="text-xs text-red-400 font-semibold mt-3 pt-2 border-t border-white/5">Kashi Pilgrimage</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('7WZiEgow6tI', 'Udupi to Agumbe Bike ride | ಉಡುಪಿಯಿಂದ ಆಗುಂಬೆಗೆ ಬೈಕ್ ರೈಡ್')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/7WZiEgow6tI/hqdefault.jpg" alt="Agumbe Bike Ride" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">Bike Ride</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">Udupi to Agumbe Bike ride | ಬೈಕ್ ರೈಡ್</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Thrilling motorcycle ride through Western Ghats twists and misty waterfalls.</p>
+            </div>
+            <span class="text-xs text-red-400 font-semibold mt-3 pt-2 border-t border-white/5">Agumbe Ghat</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('VKOKct-jPUE', 'ಕರಾವಳಿ ಗ್ರಾಮ ಜೀವನ ಪಯಣ | Coastal Lifestyle Vlog')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/VKOKct-jPUE/hqdefault.jpg" alt="Coastal Life" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">Coastal Life</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಕರಾವಳಿ ಗ್ರಾಮ ಜೀವನ ಪಯಣ | Coastal Life</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Exploring traditional village beauty, coastal fields, and seaside trails.</p>
+            </div>
+            <span class="text-xs text-amber-400 font-semibold mt-3 pt-2 border-t border-white/5">Village Life</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('mcQZOeu105c', 'ಉತ್ತರ ಭಾರತ ಧಾರ್ಮಿಕ ಯಾತ್ರೆ | North India Yatre')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/mcQZOeu105c/hqdefault.jpg" alt="Pilgrimage Yatre" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">Yatre</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಉತ್ತರ ಭಾರತ ಧಾರ್ಮಿಕ ಯಾತ್ರೆ | North India Yatre</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Memorable spiritual highlights and train travel across holy shrines.</p>
+            </div>
+            <span class="text-xs text-amber-400 font-semibold mt-3 pt-2 border-t border-white/5">Spiritual Journey</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-center pt-4">
+        <a href="https://www.youtube.com/@JitheshKumar/search?query=vlog" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 bg-neutral-900 hover:bg-red-600/20 text-neutral-300 hover:text-white border border-white/15 hover:border-red-500/50 px-6 py-3 rounded-xl text-xs sm:text-sm font-bold uppercase tracking-wider transition">
+          View More Vlogs on YouTube <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- 7. SONGS & BHAJAN (6 Videos) -->
+    <section id="songs" class="space-y-6">
+      <div class="border-b border-white/10 pb-4">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-wide font-brand">Songs &bull; ಭಕ್ತಿಗೀತೆಗಳು ಮತ್ತು ಭಜನೆ</h2>
+        <p class="text-xs sm:text-sm text-neutral-400 max-w-2xl mt-1">
+          Soulful keertanas, songs, and synchronized Kunita Bhajane published on the channel.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('MzOhUJwEbwc', 'ಗುರುದೇವ.. ಗುರುದೇವಾ | ಬ್ರಹ್ಮಶ್ರೀ ನಾರಾಯಣ Guru Devotional Song')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/MzOhUJwEbwc/hqdefault.jpg" alt="Narayana Guru Song" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">Music</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಗುರುದೇವ.. ಗುರುದೇವಾ | ಬ್ರಹ್ಮಶ್ರೀ ನಾರಾಯಣ ಗುರುಗಳ ಭಕ್ತಿ ಗೀತೆ</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Lyrics, music and video presentation by Jithesh Kumar.</p>
+            </div>
+            <span class="text-xs text-amber-400 font-semibold mt-3 pt-2 border-t border-white/5">Devotional Song</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('K6H7-4YFZRA', 'ಕೃಷ್ಣಾ ಎನಬಾರದೇ.. | ಪುರಂದರದಾಸರ ಕೀರ್ತನೆ | Kannada Devotional')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/K6H7-4YFZRA/hqdefault.jpg" alt="Purandaradasa Keertane" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">07:59</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಕೃಷ್ಣಾ ಎನಬಾರದೇ.. | ಪುರಂದರದಾಸರ ಕೀರ್ತನೆ</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Soulful rendition of Saint Purandaradasa's classical devotional keertane.</p>
+            </div>
+            <span class="text-xs text-amber-400 font-semibold mt-3 pt-2 border-t border-white/5">Purandaradasa</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('4GH6sLxv5WU', 'ಇದನ್ನು ನೋಡ್ತಾ ಇದ್ರೆ ಬೋರ್ ಖಂಡಿತಾ ಆಗಲ್ಲ | ಮಹಿಳಾ ಕುಣಿತ ಭಜನೆ | Kunita Bhajane')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/4GH6sLxv5WU/hqdefault.jpg" alt="Kunita Bhajane Katapadi" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">533K Views</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಮಹಿಳಾ ಕುಣಿತ ಭಜನೆ | Kunita Bhajane Katapadi</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Viral synchronized coastal women folk devotional dance and Bhajan singing.</p>
+            </div>
+            <span class="text-xs text-amber-400 font-semibold mt-3 pt-2 border-t border-white/5">533K+ Views</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('MzOhUJwEbwc', 'ಶ್ರೀ ಗುರು ನಾರಾಯಣ ಸ್ತುತಿ ಗೀತೆ | Devotional Chant')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/MzOhUJwEbwc/hqdefault.jpg" alt="Guru Stuti" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">Devotional</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಶ್ರೀ ಗುರು ನಾರಾಯಣ ಸ್ತುತಿ ಗೀತೆ | Devotional Chant</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Spiritual dedication praising the teachings and light of Narayana Guru.</p>
+            </div>
+            <span class="text-xs text-amber-400 font-semibold mt-3 pt-2 border-t border-white/5">Divine Chant</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('4GH6sLxv5WU', 'ಕರಾವಳಿ ತಾಲೀಮು ಮತ್ತು ಭಜನಾ ನೃತ್ಯ | Folk Bhajan Steps')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/4GH6sLxv5WU/hqdefault.jpg" alt="Folk Bhajan" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">Bhajan Dance</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಕರಾವಳಿ ತಾಲೀಮು ಮತ್ತು ಭಜನಾ ನೃತ್ಯ | Folk Bhajan Steps</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">High tempo cymbals, rhythmic footwork and vocal harmony.</p>
+            </div>
+            <span class="text-xs text-amber-400 font-semibold mt-3 pt-2 border-t border-white/5">Rhythmic Harmony</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('K6H7-4YFZRA', 'ದಾಸ ಸಾಹಿತ್ಯ ಭಕ್ತಿ ಸಂಜೆ | Dasa Keertana Special')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/K6H7-4YFZRA/hqdefault.jpg" alt="Dasa Keertana" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">Bhakti</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ದಾಸ ಸಾಹಿತ್ಯ ಭಕ್ತಿ ಸಂಜೆ | Dasa Keertana</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Classical Carnatic melody celebrating devotion to Lord Krishna.</p>
+            </div>
+            <span class="text-xs text-amber-400 font-semibold mt-3 pt-2 border-t border-white/5">Classical Bhakti</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-center pt-4">
+        <a href="https://www.youtube.com/@JitheshKumar/videos" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 bg-neutral-900 hover:bg-red-600/20 text-neutral-300 hover:text-white border border-white/15 hover:border-red-500/50 px-6 py-3 rounded-xl text-xs sm:text-sm font-bold uppercase tracking-wider transition">
+          View More Songs on YouTube <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- 8. YAKSHAGANA (6 Videos) -->
+    <section id="yakshagana" class="space-y-6">
+      <div class="border-b border-white/10 pb-4">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-wide font-brand">Yakshagana &bull; ಯಕ್ಷಗಾನ ರಂಗಕಲೆ</h2>
+        <p class="text-xs sm:text-sm text-neutral-400 max-w-2xl mt-1">
+          Coastal traditional theatre performances, comedy acts, and powerful Bhagavatike recorded live.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('1yq9mgC5tI4', 'ಯಕ್ಷಗಾನ ಹಾಸ್ಯ | Yakshagana | Ramesh Bhandari Hasya | Mekkekattu')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/1yq9mgC5tI4/hqdefault.jpg" alt="Yakshagana Ramesh Bhandari" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">Comedy</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಯಕ್ಷಗಾನ ಹಾಸ್ಯ | Ramesh Bhandari Hasya</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Legendary comedy sequence from Mekkekattu Yakshagana performance.</p>
+            </div>
+            <span class="text-xs text-red-400 font-semibold mt-3 pt-2 border-t border-white/5">Yakshagana Hasya</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('QzM9gsHhvlc', 'Yakshagana 2018 | Jansale Raghavendra Acharya & Theertahalli Gopal Achar')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/QzM9gsHhvlc/hqdefault.jpg" alt="Yakshagana Jansale" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">Yakshagana</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2">Yakshagana | Jansale &amp; Theertahalli Gopal Achar</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Authentic coastal theatrical singing and chande drumming.</p>
+            </div>
+            <span class="text-xs text-red-400 font-semibold mt-3 pt-2 border-t border-white/5">Yakshagana Jugalbandi</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('WIrENzhPfuU', 'Yakshagana Pushpa Chandana | Jarkala | Kyadagi | Subramanya Dhareshwara')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/WIrENzhPfuU/hqdefault.jpg" alt="Yakshagana Pushpa Chandana" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">50K Views</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">Yakshagana Pushpa Chandana | Jarkala &amp; Kyadagi</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Classic stage comedy and Bhagavatike by Subramanya Dhareshwara.</p>
+            </div>
+            <span class="text-xs text-amber-400 font-semibold mt-3 pt-2 border-t border-white/5">50K+ Views</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('1yq9mgC5tI4', 'ಯಕ್ಷಗಾನ ಪ್ರಸಿದ್ಧ ಪ್ರಸಂಗ | Stage Play Excerpt')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/1yq9mgC5tI4/hqdefault.jpg" alt="Yakshagana Play" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">Prasanga</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಯಕ್ಷಗಾನ ಪ್ರಸಿದ್ಧ ಪ್ರಸಂಗ | Stage Play</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Engaging dialogue delivery and expressional acting on the traditional stage.</p>
+            </div>
+            <span class="text-xs text-amber-400 font-semibold mt-3 pt-2 border-t border-white/5">Stage Drama</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('QzM9gsHhvlc', 'ಯಕ್ಷಗಾನ ಭಾಗವತಿಕೆ ಮತ್ತು ಚಂಡೆ ಮದ್ದಳೆ | Chande Maddale')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/QzM9gsHhvlc/hqdefault.jpg" alt="Chande Maddale" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">Bhagavatike</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಯಕ್ಷಗಾನ ಭಾಗವತಿಕೆ ಮತ್ತು ಚಂಡೆ ಮದ್ದಳೆ</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">High energy rhythm beats and resonant vocals driving the narrative.</p>
+            </div>
+            <span class="text-xs text-red-400 font-semibold mt-3 pt-2 border-t border-white/5">Rhythm &amp; Vocal</span>
+          </div>
+        </div>
+
+        <div class="bg-[#0d0d12] border border-white/10 rounded-xl overflow-hidden hover:border-red-500/50 transition duration-300 group cursor-pointer flex flex-col"
+             onclick="playVideo('WIrENzhPfuU', 'ಯಕ್ಷಗಾನ ರಂಗ ವೈಭವ | Live All Night Performance')">
+          <div class="aspect-video relative overflow-hidden bg-neutral-950">
+            <img src="https://img.youtube.com/vi/WIrENzhPfuU/hqdefault.jpg" alt="Ranga Vaibhava" class="w-full h-full object-cover group-hover:scale-105 transition" />
+            <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition flex items-center justify-center">
+              <div class="w-10 h-10 rounded-full bg-red-600/90 flex items-center justify-center text-white"><i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i></div>
+            </div>
+            <span class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 rounded text-[10px] font-mono">Ranga Vaibhava</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white group-hover:text-red-400 transition line-clamp-2 font-kannada">ಯಕ್ಷಗಾನ ರಂಗ ವೈಭವ | All Night Show</h3>
+              <p class="text-xs text-neutral-400 mt-1 line-clamp-2">Intricate face painting, traditional costumes, and midnight performance magic.</p>
+            </div>
+            <span class="text-xs text-amber-400 font-semibold mt-3 pt-2 border-t border-white/5">Classic Art</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-center pt-4">
+        <a href="https://www.youtube.com/@JitheshKumar/search?query=yakshagana" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 bg-neutral-900 hover:bg-red-600/20 text-neutral-300 hover:text-white border border-white/15 hover:border-red-500/50 px-6 py-3 rounded-xl text-xs sm:text-sm font-bold uppercase tracking-wider transition">
+          View More Yakshagana Videos on YouTube <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="pt-8 border-t border-white/10">
+      <div class="bg-[#0c0c14] border border-white/10 rounded-3xl p-8 sm:p-12">
+        <div class="max-w-3xl mx-auto text-center space-y-6">
+          <span class="text-xs uppercase font-bold text-amber-400 tracking-widest">About Creator</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-brand">Preserving the Soul of Tulunadu</h2>
+          <p class="text-sm sm:text-base text-neutral-300 leading-relaxed font-kannada">
+            ತುಳುನಾಡಿನ ಗಂಡುಕಲೆ, ದೈವಾರಾಧನೆ, ಕಂಬಳ, ಹುಲಿವೇಷ, ರಂಗಭೂಮಿ ಯಕ್ಷಗಾನ ಮತ್ತು ಭಕ್ತಿ ಪರಂಪರೆಯನ್ನು ವಿಶ್ವಾದ್ಯಂತ ಪಸರಿಸುವ ಉದ್ದೇಶದಿಂದ ಈ ಚಾನೆಲ್ ಕಾರ್ಯಾಚರಿಸುತ್ತಿದೆ. ಕರಾವಳಿ ಕರ್ನಾಟಕದ ನೈಜ ಸಂಸ್ಕೃತಿ ಮತ್ತು ದೈವಿಕ ಪರಂಪರೆಯನ್ನು ವಿಡಿಯೋ ಮೂಲಕ ಮುಂದಿನ ಪೀಳಿಗೆಗೆ ದಾಖಲಿಸುವುದು ನಮ್ಮ ಪ್ರಮುಖ ಧ್ಯೇಯ.
+          </p>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 text-left">
+            <div class="bg-neutral-900/80 p-4 rounded-xl border border-white/5">
+              <span class="block text-2xl font-bold text-amber-400">100+</span>
+              <span class="text-xs text-neutral-400">Sacred Rituals Filmed</span>
+            </div>
+            <div class="bg-neutral-900/80 p-4 rounded-xl border border-white/5">
+              <span class="block text-2xl font-bold text-red-500">Kola &bull; Nema</span>
+              <span class="text-xs text-neutral-400">Field Work</span>
+            </div>
+            <div class="bg-neutral-900/80 p-4 rounded-xl border border-white/5">
+              <span class="block text-2xl font-bold text-amber-400">Yakshagana</span>
+              <span class="text-xs text-neutral-400">Art &amp; Folk Culture</span>
+            </div>
+            <div class="bg-neutral-900/80 p-4 rounded-xl border border-white/5">
+              <span class="block text-2xl font-bold text-red-500">4K &bull; HD</span>
+              <span class="text-xs text-neutral-400">High Quality Sound</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="pt-8 border-t border-white/10">
+      <div class="bg-gradient-to-br from-[#0c0c14] to-[#13131e] border border-white/10 rounded-3xl p-6 sm:p-12">
+        <div class="grid lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-5 flex flex-col sm:flex-row items-center sm:items-start gap-6 text-center sm:text-left">
+            <div class="w-24 h-24 rounded-full p-1 bg-gradient-to-tr from-red-600 via-amber-500 to-red-500 shrink-0">
+              <div class="w-full h-full rounded-full bg-neutral-900 flex items-center justify-center font-bold text-2xl text-white">
+                JK
+              </div>
+            </div>
+            <div>
+              <span class="text-xs uppercase font-bold text-red-500 tracking-wider">Creator &bull; Production</span>
+              <h3 class="text-2xl font-bold text-white font-brand">JITHESH KUMAR</h3>
+              <p class="text-xs text-neutral-400 mt-1">
+                For video shoots, cultural event coverages, collaborations, and inquiries:
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2 justify-center sm:justify-start">
+                <a href="tel:+919844872887" class="inline-flex items-center gap-2 bg-neutral-800/80 hover:bg-neutral-800 text-xs text-white px-3 py-1.5 rounded-lg border border-white/10 transition">
+                  <i data-lucide="phone" class="w-3.5 h-3.5 text-green-400"></i> +91 9844872887
+                </a>
+                <a href="https://wa.me/919844872887" target="_blank" class="inline-flex items-center gap-2 bg-green-950/60 hover:bg-green-900/60 text-xs text-green-400 px-3 py-1.5 rounded-lg border border-green-800/40 transition">
+                  <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Media Icons Cards -->
+          <div class="lg:col-span-7 grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <a href="https://www.youtube.com/@JitheshKumar" target="_blank"
+               class="bg-neutral-900/90 border border-white/10 hover:border-red-500/60 p-4 rounded-xl flex flex-col items-center justify-center text-center transition group">
+              <i data-lucide="youtube" class="w-6 h-6 text-red-500 group-hover:scale-110 transition"></i>
+              <span class="text-xs font-bold text-white mt-2">YouTube</span>
+              <span class="text-[10px] text-neutral-400">@JitheshKumar</span>
+            </a>
+
+            <a href="https://instagram.com/mejithesh" target="_blank"
+               class="bg-neutral-900/90 border border-white/10 hover:border-pink-500/60 p-4 rounded-xl flex flex-col items-center justify-center text-center transition group">
+              <i data-lucide="instagram" class="w-6 h-6 text-pink-500 group-hover:scale-110 transition"></i>
+              <span class="text-xs font-bold text-white mt-2">Instagram</span>
+              <span class="text-[10px] text-neutral-400">@mejithesh</span>
+            </a>
+
+            <a href="https://facebook.com/mejithesh" target="_blank"
+               class="bg-neutral-900/90 border border-white/10 hover:border-blue-500/60 p-4 rounded-xl flex flex-col items-center justify-center text-center transition group">
+              <i data-lucide="facebook" class="w-6 h-6 text-blue-500 group-hover:scale-110 transition"></i>
+              <span class="text-xs font-bold text-white mt-2">Facebook</span>
+              <span class="text-[10px] text-neutral-400">/mejithesh</span>
+            </a>
+
+            <a href="https://twitter.com/mejithesh" target="_blank"
+               class="bg-neutral-900/90 border border-white/10 hover:border-white/40 p-4 rounded-xl flex flex-col items-center justify-center text-center transition group">
+              <i data-lucide="twitter" class="w-6 h-6 text-neutral-200 group-hover:scale-110 transition"></i>
+              <span class="text-xs font-bold text-white mt-2">Twitter (X)</span>
+              <span class="text-[10px] text-neutral-400">@mejithesh</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10 bg-[#030305] py-8 text-center text-xs text-neutral-500">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>&copy; 2026 Jithesh Kumar &bull; All Rights Reserved.</p>
+      <p class="text-neutral-400">Tulunadu Cultural Network</p>
+      <a href="#" class="text-neutral-400 hover:text-white flex items-center gap-1">Back to top <i data-lucide="arrow-up" class="w-3.5 h-3.5"></i></a>
+    </div>
+  </footer>
+
+  <!-- VIDEO MODAL -->
+  <div id="videoModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4 sm:p-6">
+    <div class="bg-[#0e0e13] border border-white/20 rounded-2xl w-full max-w-4xl overflow-hidden shadow-2xl relative">
+      <div class="flex items-center justify-between px-5 py-3 border-b border-white/10 bg-[#09090d]">
+        <div class="flex items-center gap-2 overflow-hidden pr-4">
+          <span class="w-2.5 h-2.5 rounded-full bg-red-600 animate-pulse shrink-0"></span>
+          <h4 id="modalVideoTitle" class="text-sm font-bold text-white truncate font-kannada">Playing Video</h4>
+        </div>
+        <button onclick="closeVideo()" class="p-1 rounded-lg text-neutral-400 hover:text-white hover:bg-neutral-800 transition">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="aspect-video w-full bg-black">
+        <iframe id="modalIframe" class="w-full h-full" src="" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen></iframe>
+      </div>
+
+      <div class="p-4 bg-[#09090d] border-t border-white/10 flex items-center justify-between">
+        <div class="text-xs text-neutral-400">
+          Channel: <strong class="text-white">@JitheshKumar</strong>
+        </div>
+        <a id="modalDirectLink" href="#" target="_blank" class="text-xs text-amber-400 hover:underline flex items-center gap-1">
+          Open on YouTube app <i data-lucide="external-link" class="w-3 h-3"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    function playVideo(videoId, title) {
+      const modal = document.getElementById('videoModal');
+      const iframe = document.getElementById('modalIframe');
+      const titleElem = document.getElementById('modalVideoTitle');
+      const directLink = document.getElementById('modalDirectLink');
+
+      titleElem.textContent = title;
+      
+      const pageOrigin = (window.location.protocol === 'file:') 
+        ? 'https://www.youtube.com' 
+        : window.location.origin;
+
+      iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&playsinline=1&enablejsapi=1&rel=0&modestbranding=1&origin=${encodeURIComponent(pageOrigin)}`;
+      directLink.href = `https://www.youtube.com/watch?v=${videoId}`;
+
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeVideo() {
+      const modal = document.getElementById('videoModal');
+      const iframe = document.getElementById('modalIframe');
+      iframe.src = '';
+      modal.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    document.getElementById('videoModal').addEventListener('click', function(e) {
+      if (e.target === this) closeVideo();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeVideo();
+    });
+
+    function scrollShorts(direction) {
+      const slider = document.getElementById('shorts-slider');
+      const amount = 320;
+      if (direction === 'left') {
+        slider.scrollBy({ left: -amount, behavior: 'smooth' });
+      } else {
+        slider.scrollBy({ left: amount, behavior: 'smooth' });
+      }
+    }
+  </script>
+</body>
+</html>
